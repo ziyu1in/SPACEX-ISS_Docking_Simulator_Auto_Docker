@@ -1,0 +1,36 @@
+{
+    "name": "ISS",
+    "description": "Automatic spaceX ISS docking simulator docker",
+    "version": "1.0",
+    "manifest_version": 3,
+
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
+
+    "action": {
+        "default_popup": "/popup/run_controller.html",
+
+        "default_icon": {
+            "16": "/pictures/cat16.png",
+            "32": "/pictures/cat32.png",
+            "48": "/pictures/cat48.png",
+            "128": "/pictures/cat128.png"
+        }
+    },
+
+    "icons": {
+        "16": "/pictures/cat16.png",
+        "32": "/pictures/cat32.png",
+        "48": "/pictures/cat48.png",
+        "128": "/pictures/cat128.png"
+    },
+
+    "commands": {
+        "_execute_action" : {
+            "suggested_key" : {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Open html"
+        }
+    }
+}
