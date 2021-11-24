@@ -32,10 +32,14 @@
     let yPast = 0;
     let zPast = 0;
     let pitchPast = 0;
+    let rollPast = 0;
+    let yawPast= 0;
     let xErrorPast = 0;
     let yErrorPast = 0;
     let zErrorPast = 0;
     let pitchErrorPast = 0;
+    let rollErrorPast = 0;
+    let yawErrorPast = 0;
     let xSum = 0;
     let ySum = 0;
     let zSum = 0;
@@ -354,27 +358,6 @@
         yawErrorPast = yawError;
     }
 
-    // function pitchPID(shipStates) {
-    //     let pitch = shipStates["pitchAngle"];
-    //     let pitchRate = shipStates["pitchRate"];
-    //     let pitchError = pitch;
-    //     let pitchI = (pitchError + pitchErrorPast)* dt / 2;
-    //     pitchSum += pitchI;
-    //     let pitchD = (pitchError + pitchErrorPast)/dt;
-    //     let pitchInput;
-    //     pitchInput = kPPitch * pitchError + kIPitch * pitchSum + kDPitch * pitchD;
-    //     for (let i = 0; i < (Math.abs(pitchInput - pitchRate) / 0.1); i++) {
-    //         if (pitchInput < pitchRate) {
-    //             document.querySelector("#pitch-up-button").click();
-    //         }
-    //         else if (pitchInput > pitchRate) {
-    //             document.querySelector("#pitch-down-button").click();
-    //         }
-    //     }
-    //     pitchPast = pitch
-    //     pitchErrorPast = pitchError;
-    // }
-
     function attitudeStateMachine() {
         let shipStates = getStates();
         let pitchStateNow = pitchStateMachine(shipStates);
@@ -589,7 +572,8 @@
         (shipStates["range"] !== 0)) {
             // attitudeControlSmall(shipStates);
             pitchPID(shipStates);
-            // rollPID(shipStates);
+            rollPID(shipStates);
+            yawPID(shipStates);
             if (Math.abs(shipStates["pitchAngle"]) < 10 && 
             Math.abs(shipStates["rollAngle"]) < 10 &&
             Math.abs(shipStates["yawAngle"]) < 10) {
