@@ -4,6 +4,8 @@ This plugin is based on SpaceX's online ISS Docking Simulator (https://iss-sim.s
 
 This plugin has the ability to dock with high success rate with any starting position, play with it!
 
+# Demonstration
+https://user-images.githubusercontent.com/26315050/143977351-86254759-e569-47fc-94b2-51fc8b91e225.mp4
 
 # How to install
 1. Download the whole repository
