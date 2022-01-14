@@ -182,7 +182,7 @@
             xErrorPast = xError;
         }
         else {
-            if (xRate > -0.09) {
+            if (xRate > -0.07) {
                 document.querySelector("#translate-forward-button").click();
             }
             else if (xRate < -0.14) { /* input magnitude is too large at final stage */
