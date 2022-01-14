@@ -20,9 +20,9 @@ https://user-images.githubusercontent.com/26315050/149435474-e0f7d459-6cb9-41bc-
 # How to install
 1. Download the whole repository
 2. Go to (chrome://extensions/)
-3. Click Load Unpacked
-4. Select the **unpacked** plugin folder
-
+3. Make sure developer mode is turned on (at upper-right corner of the page)
+4. Click Load Unpacked (at upper-left corner of the page)
+5. Select the **unpacked** plugin folder (you will need to decompress the .zip file)
 
 # How to use
 1. Go to (https://iss-sim.spacex.com/)
